@@ -8,7 +8,7 @@ WORKDIR /app
 
 # Copy the requirements file and source code
 COPY requirements.txt requirements.txt
-COPY src/ .
+# COPY src/ .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
