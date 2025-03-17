@@ -1,1 +1,9 @@
-tensorflow[and-cuda]==2.18.0
+pydbtools
+numpy
+pybind11
+pyyaml
+gptables
+openpyxl
+XlsxWriter
+boto3
+
