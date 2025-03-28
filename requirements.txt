@@ -6,4 +6,5 @@ gptables
 openpyxl
 XlsxWriter
 boto3
+papermill
 
