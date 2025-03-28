@@ -132,5 +132,24 @@ install --owner nobody --group nogroup --mode 0755 uv-x86_64-unknown-linux-gnu/u
 rm --force --recursive uv.tar.gz uv-x86_64-unknown-linux-gnu
 EOF
 
+# Copy the requirements file and source code
+COPY requirements.txt requirements.txt
+# COPY src/ .
+
+RUN <<EOF
+pip install --no-cache-dir --requirement requirements.txt
+EOF
+
+# Ensure Jupyter is installed if running notebooks
+RUN pip install --no-cache-dir jupyter
+
+ENTRYPOINT ["python3", "main.py"]
+
 USER ${CONTAINER_UID}
 WORKDIR ${ANALYTICAL_PLATFORM_DIRECTORY}
+
+
+
+
+
+
