@@ -17,6 +17,6 @@ COPY requirements.txt requirements.txt
 # RUN pip install --no-cache-dir jupyter
 
 # Switch back to the original container user
-USER ${CONTAINER_UID}
+USER ${analyticalplatform}
 
 ENTRYPOINT ["python3", "main.py"]
